@@ -1,0 +1,381 @@
+body {
+  padding-top: 2em;
+  background: White;
+  font-family: 'Libre Baskerville', serif;
+  color: #6d6d6d;
+  padding: 0;
+  margin: 0;
+}
+
+.byline {
+  color: #424242;
+  font-style: italic;
+}
+
+.quote {
+  font-size: 0.85em;
+  border-left: solid #e85d58 3px;
+  opacity: 0.8;
+  padding-left: 2em;
+  margin-left: 3em;
+}
+
+.date {
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: Bold;
+  font-size: 14px;
+  margin-left: 1em;
+}
+
+@media screen and (max-width: 1200px) {
+  .cell {
+    display: table-row !important;
+  }
+
+  .right_panel {
+    display: table-row !important;
+  }
+
+  #container {
+    max-width: 40em !important;
+    padding: 1em 1.5em !important;
+    margin-top: 1em !important;
+    border-left: inherit !important;
+    border-top: solid 1px Gainsboro;
+  }
+}
+
+.header {
+    font-size: 2em;
+    margin: 1em auto 0.7em auto;
+    color: #e85d58;
+    font-weight: bold;
+}
+
+.subheader {
+    font-size: 23px;
+    margin: 1em auto 0.7em auto;
+    color: #e85d58;
+    font-weight: bold;
+}
+
+.content {
+    max-width: 65em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 2em 1.5em 2em;
+    line-height: 1.6;
+}
+
+.content p {
+    width: 47em;
+    margin-top: 0;
+    margin-bottom: 1.75em;
+    line-height: 1.75;
+}
+
+.table-row {
+    background: #F7F7F7;
+    padding: 2em;
+}
+
+.table {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  background: White;
+  padding: 2em;
+  border: solid 1px #ECECEC;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #D2D2D2;
+}
+
+.table2 {
+  display: table;
+}
+
+.tooltip {
+  display: inline-block;
+  position: fixed;
+  visibility: hidden;
+  background: #FBFBFB;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  color: #383838;
+  font-family: Arial;
+  pointer-events: none;
+  box-shadow: 0 0 3px Gray;
+  z-index: 3;
+}
+
+label span {
+    font-family: Arial;
+    color: Gray;
+    padding: 0.8em 1.4em;
+    display: inline-block;
+    cursor: pointer;
+    border: solid 2px Gray;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0.5em;
+}
+
+label.all {
+  display: table;
+}
+
+label.all:after {
+  content: '';
+  width: 100%;
+  border-bottom: inset 1px Gainsboro;
+  display: block;
+  margin: 0.5em 0 0.5em 0.5em;
+}
+
+label.normal_check {
+  display: block;
+}
+
+label.normal_check span {
+  padding: inherit;
+  margin-top: 1em;
+  border: inherit;
+}
+
+label input {
+    display: none;
+}
+
+label input:checked + span {
+    color: White;
+    background: Gray;
+}
+
+label.normal_check input:checked + span {
+  color: inherit;
+  background: inherit;
+}
+
+label.normal_check input + span:after {
+  margin-left: 0.5em;
+  content: '\00A0';
+  background: White;
+  border: solid 1px Gray;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 15px;
+}
+
+label.normal_check input:checked + span:after {
+  content: '\2713';
+}
+
+.graphic {
+  display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.right_panel {
+  display: table-cell;
+  vertical-align: top;
+  font-size: 0.9em;
+}
+
+#container {
+    max-width: 34em;
+    border-left: solid 1px Gainsboro;
+    padding-left: 1em;
+    padding: 2em 1.5em;
+}
+
+#container p {
+    margin-left: 0.5em;
+    font-family: Arial;
+    color: Gray;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+
+#container p.small {
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    font-family: Arial;
+    color: Gray;
+    margin-bottom: 0.5em;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.state {
+    display: block;
+    font-weight: Bold;
+    padding: 0.5em;
+    border-bottom: solid 1px Gainsboro;
+    margin-bottom: 0.6em;
+}
+
+.row {
+    display: table-row;
+}
+
+.source {
+    display: table-cell;
+    padding: 0.2em 0.5em;
+    vertical-align: middle;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.score {
+    display: table-cell;
+    padding-left: 1.5em;
+    font-size: 0.8em;
+    color: #636363;
+    vertical-align: middle;
+    padding-right: 1em;
+    border-right: dashed 1px Gainsboro;
+}
+
+.ev {
+    display: inline-block;
+    font-weight: normal;
+    color: Gray;
+    padding-left: 0.5em;
+}
+
+.row.state-row {
+    border-bottom: solid 1px Gainsboro;
+}
+
+.source:nth-child(3) {
+    padding-left: 1.5em;
+}
+
+.score:last-child {
+    padding-right: 0;
+    border-right: none;
+}
+
+.color {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: baseline;
+  margin-right: 0.6em;
+  box-shadow: 0 0 1px Gray;
+}
+
+.election_results {
+  font-size: 0.9em;
+  border-bottom: solid 1px #F1F1F1;
+  padding-bottom: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+span.outcome_text {font-weight: bold;margin-left: 0.4em;margin-right: 0.5em;}
+
+.sources a:hover {
+    text-decoration: underline;
+}
+.sources a {
+    color: #2751FA;
+    text-decoration: inherit;
+}
+.sources {
+  font-family: Arial, sans-serif;
+  margin: 0.5em 0 0 0.6em;
+  font-size: 0.9em;
+  border-top: solid 1px Gainsboro;
+  padding-top: 1em;
+  color: Gray;
+}
+
+.content-row {
+    display: table-row;
+}
+
+.content-section {
+    padding-top: 1em;
+    font-size: 1.2em;
+    font-family: Georgia, serif;
+    max-width: 45em;
+    display:table-cell;
+    -webkit-column-span: all;
+    column-span: all;
+}
+
+#ev_tooltip {
+  width: 250px;
+}
+
+#ev_tooltip div.chance {
+    font-size: 2em;
+    color: Black;
+    text-shadow: 2px 2px 0px #c3c3c3;
+    margin-bottom: 0.4em;
+}
+
+#ev_tooltip div {
+    font-size: 1.2em;
+    color: Gray;
+    margin-bottom: 0.1em;
+}
+
+#ev_tooltip span.candidate {
+    font-weight: Bold;
+    margin-right: 0.3em;
+}
+
+#ev_tooltip div.ev_table {
+    display: table;
+    font-size: 0.8em;
+}
+
+.ev_row {
+    display: table-row;
+}
+
+.ev_cell {
+    display: table-cell;
+}
+
+.ev_source {
+    text-align: right;
+    padding-right: 0.5em;
+    font-weight: Bold;
+    color: Black;
+}
+
+#ev_tooltip div.ev_perc {
+    color: Black;
+}
+
+#ev_tooltip div.actual-outcome {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: BOLD;
+    color: #565656;
+    letter-spacing: 1.2;
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 2px #c7c7c7;
+}
+
+.title {
+    text-align: center;
+    padding-left: 5em;
+    padding-bottom: 0.5em;
+}
