@@ -7,7 +7,6 @@
   :global(a) {
     text-decoration: underline;
     color: inherit;
-    display: inline-block;
   }
 
   :global(a.nounder) {
