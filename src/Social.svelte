@@ -34,7 +34,7 @@
   }
 </style>
 
-<Link noUnderline={true} href={link}>
+<Link noUnderline={true} href={link} aria={text}>
   <div class="social" class:hide={hideMobile}>
     <span class="icon">{@html icon}</span>&nbsp;<span class="middle">{text}</span>
   </div>
