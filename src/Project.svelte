@@ -11,12 +11,14 @@
   :global(.images) {
     margin-left: -0.6em;
     position: relative;
-    height: 148px;
+    height: 154px;
+    margin-bottom: -6px;
   }
 
   :global(.scroll) {
     white-space: nowrap;
     overflow-x: auto;
+    overflow-y: hidden;
     height: 100%;
   }
 
@@ -25,7 +27,7 @@
     right: 0;
     width: 2em;
     top: 0;
-    bottom: 8px;
+    bottom: 12px;
     background: transparent;
     background: linear-gradient(to left, #FFF9EF, #fff9ef00);
   }

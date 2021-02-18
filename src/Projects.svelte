@@ -38,6 +38,17 @@
   <p>I coded the experience using the <Link href="https://aframe.io/">A-Frame</Link> Web.VR framework (<Link href="https://github.com/freedmand/rippleplastic">source code</Link>). Steps involved include 1) mapping 2D photoshop layers into 3D objects using a customly designed Blender pipeline, 2) creating a layout algorithm to place objects randomly on a sphere using a combination of Perlin noise and Poisson-disc sampling, 3) coordinating production with fellow journalism students, and 4) composing custom theme music for the experience. I wrote a <Link href="https://medium.com/@StanfordJournalism/plastic-ocean-debris-virtual-reality-and-art-9e253d702dd7">blog post</Link> about the process. The experience premiered at the <Link href="https://www.impressions-gallery.com/event/mandy-barker-our-plastic-ocean/">Our Plastic Ocean exhibition</Link> at Impressions Gallery, England in 2019.</p>
 </Project>
 
+<Project name="Inferactive" images={[
+  ["inferactive", 211],
+  ["chart", 511],
+  ["table", 800],
+  ["stats", 444],
+]}>
+  <p>Website: <Link href="https://inferactive.org/">inferactive.org</Link></p>
+  <p>Inferactive is an interactive data tool for finding insights and inferences I made as part of my master’s thesis. The entirely web-based platform features a four-step analysis and discovery flow: 1) upload CSV data or select an example dataset, 2) refine by selecting columns to include/exclude from a table/detail view, 3) view statistics and one-dimensional charts for each data column, and 4) discover insights and trends in the data by viewing a shuffleable assortment of auto-generated plots correlating two data columns.</p>
+  <p>The project is written in <Link href="https://svelte.dev/">Svelte</Link> and geared for frontend performance and the ability to handle large datasets.</p>
+</Project>
+
 <Project name="Sounds" images={[
   ["sound1", 782],
   ["sound2", 401],
