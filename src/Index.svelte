@@ -134,7 +134,7 @@
 
       <p>I work at <Link href="https://www.muckrock.com/">MuckRock</Link>, where I lead development of <Link href="https://beta.documentcloud.org/">DocumentCloud</Link>, a platform for journalists to upload, search, analyze, annotate, and share documents.</p>
 
-      <p>Previously, I worked as a software engineer at Google, researching and developing websites in <Link href="https://research.google/research-areas/machine-perception/">Machine Perception</Link>. In the past, I’ve <Link href="/assets/docs/freedman_resume_jan_2021.pdf">studied</Link> journalism, computer science, and music.</p>
+      <p>Previously, I worked as a software engineer at Google, researching and developing websites in <Link href="https://research.google/research-areas/machine-perception/">Machine Perception</Link>. In the past, I’ve <Link href="https://datajourn.com/">taught</Link> data journalism and <Link href="/assets/docs/freedman_resume_jan_2021.pdf">studied</Link> computational journalism, computer science, and music.</p>
 
       <p class="show">To get in touch, feel free to reach out at <Link href="mailto:freedmand@gmail.com">freedmand@gmail.com</Link>.</p>
     </div>
