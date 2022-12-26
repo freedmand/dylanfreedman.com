@@ -1,11 +1,17 @@
-import Index from './Index.svelte';
-const minify = require('html-minifier').minify;
-const posthtml = require('posthtml');
-const removeAttributes = require('posthtml-remove-attributes');
-const fs = require('fs')
+import Index from "./Index.svelte";
+const minify = require("html-minifier").minify;
+const posthtml = require("posthtml");
+const removeAttributes = require("posthtml-remove-attributes");
+const fs = require("fs");
 
 async function main() {
-  const { head, html, css } = Index.render();
+  // Read in dimensions
+  const dimensions = JSON.parse(fs.readFileSync("dimensions.json"));
+
+  const { head, html, css } = Index.render(
+    {},
+    { context: new Map([["dimensions", dimensions]]) }
+  );
 
   const fullHtml = `
 <!DOCTYPE html>
@@ -23,11 +29,14 @@ async function main() {
 </html>
 `;
 
-  const cleanedHtml = (await posthtml([
-    removeAttributes([  // The only non-array argument is also possible
-      'data-svelte',
-    ])
-  ]).process(fullHtml)).html;
+  const cleanedHtml = (
+    await posthtml([
+      removeAttributes([
+        // The only non-array argument is also possible
+        "data-svelte",
+      ]),
+    ]).process(fullHtml)
+  ).html;
 
   const minifiedHtml = cleanedHtml;
   // const minifiedHtml = minify(cleanedHtml, {

@@ -2,7 +2,25 @@
   export let href;
   export let noUnderline = false;
   export let aria = null;
+  export let rel = null;
 </script>
+
+{#if aria != null}
+  <a
+    aria-label={aria}
+    class:nounder={noUnderline}
+    {href}
+    rel="noreferrer noopener{rel == null ? '' : ` ${rel}`}"
+    target="_blank"><slot /></a
+  >
+{:else}
+  <a
+    class:nounder={noUnderline}
+    {href}
+    rel="noreferrer noopener{rel == null ? '' : ` ${rel}`}"
+    target="_blank"><slot /></a
+  >
+{/if}
 
 <style>
   :global(a) {
@@ -15,9 +33,3 @@
     display: inline;
   }
 </style>
-
-{#if aria != null}
-<a aria-label={aria} class:nounder={noUnderline} {href} rel="noreferrer noopener" target="_blank"><slot></slot></a>
-{:else}
-<a class:nounder={noUnderline} {href} rel="noreferrer noopener" target="_blank"><slot></slot></a>
-{/if}

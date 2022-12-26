@@ -9,6 +9,109 @@
   import icons from "./icons.js";
 </script>
 
+<svelte:head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dylan Freedman</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta
+    name="description"
+    content="I’m Dylan, a full-stack software engineer and journalist. I strive to code new tools to help journalists and the public."
+  />
+</svelte:head>
+
+<!-- Import font -->
+<Font />
+
+<h1>Dylan Freedman</h1>
+
+<div class="intro">
+  <div>
+    <div class="profile">
+      <ProfileImage />
+      <div class="socials">
+        <Social
+          hideMobile={true}
+          icon={icons.email}
+          text="Email"
+          link="mailto:freedmand@gmail.com"
+        />
+        <Social
+          rel="me"
+          icon={icons.mastodon}
+          text="Mastodon"
+          link="https://journa.host/@dylan"
+        />
+        <Social
+          icon={icons.twitter}
+          text="Twitter"
+          link="https://twitter.com/dylfreed"
+        />
+        <Social
+          icon={icons.github}
+          text="GitHub"
+          link="https://github.com/freedmand"
+        />
+        <Social
+          icon={icons.observable}
+          text="Observable"
+          link="https://observablehq.com/@freedmand"
+        />
+        <!-- TODO: make more modern resume -->
+        <!-- <Social
+          icon={icons.resume}
+          text="Résumé"
+          link="/assets/docs/freedman_resume_jan_2021.pdf"
+        /> -->
+      </div>
+    </div>
+    <div class="blurb">
+      <p>
+        Hi! I’m Dylan, a full-stack software engineer and journalist. I strive
+        to code new tools to help journalists and the public.
+      </p>
+
+      <p>
+        I work at The Washington Post as a lead engineer on Elections Platforms
+        within the newsroom engineering team, which builds tools, graphics, and
+        data pipelines to support the newsroom.
+      </p>
+
+      <p>
+        Previously, I worked at <Link href="https://www.muckrock.com/"
+          >MuckRock</Link
+        >, where I led development of journalism technology platform <Link
+          href="https://documentcloud.org/">DocumentCloud</Link
+        >, and at Google on the <Link
+          href="https://research.google/research-areas/machine-perception/"
+          >Machine Perception team</Link
+        >. I’ve <Link href="https://datajourn.com/">taught</Link> data journalism
+        and <Link href="/assets/docs/freedman_resume_jan_2021.pdf">studied</Link
+        > computational journalism, computer science, and music.
+      </p>
+
+      <p class="show">
+        To get in touch, feel free to reach out at <Link
+          href="mailto:freedmand@gmail.com">freedmand@gmail.com</Link
+        >.
+      </p>
+    </div>
+  </div>
+</div>
+
+<h2 id="projects">Projects</h2>
+<p>
+  I pursue many projects on and off work. Here are some highlights. For
+  reporting work, see <a href="#media">Media</a> below.
+</p>
+
+<Projects />
+
+<h2 id="media">Media</h2>
+
+<Media />
+
 <style>
   :global(html, body) {
     font-family: "Atkinson Hyperlegible", sans-serif;
@@ -102,99 +205,3 @@
     }
   }
 </style>
-
-<svelte:head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dylan Freedman</title>
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <meta
-    name="description"
-    content="I’m Dylan, a full-stack software engineer, designer, and journalist. I strive to code new tools to help journalists and the public."
-  />
-</svelte:head>
-
-<!-- Import font -->
-<Font />
-
-<h1>Dylan Freedman</h1>
-
-<div class="intro">
-  <div>
-    <div class="profile">
-      <ProfileImage />
-      <div class="socials">
-        <Social
-          hideMobile={true}
-          icon={icons.email}
-          text="Email"
-          link="mailto:freedmand@gmail.com"
-        />
-        <Social
-          icon={icons.twitter}
-          text="Twitter"
-          link="https://twitter.com/dylfreed"
-        />
-        <Social
-          icon={icons.github}
-          text="GitHub"
-          link="https://github.com/freedmand"
-        />
-        <Social
-          icon={icons.observable}
-          text="Observable"
-          link="https://observablehq.com/@freedmand"
-        />
-        <Social
-          icon={icons.resume}
-          text="Résumé"
-          link="/assets/docs/freedman_resume_jan_2021.pdf"
-        />
-      </div>
-    </div>
-    <div class="blurb">
-      <p>
-        Hi! I’m Dylan, a full-stack software engineer, designer, and journalist.
-        I strive to code new tools to help journalists and the public.
-      </p>
-
-      <p>
-        I work at The Washington Post as a senior full-stack software engineer
-        on the newsroom engineering team, which builds tools, graphics, and data
-        pipelines to support the newsroom.
-      </p>
-
-      <p>
-        Previously, I worked at <Link href="https://www.muckrock.com/"
-          >MuckRock</Link
-        >, where I led development of journalism technology platform <Link
-          href="https://documentcloud.org/">DocumentCloud</Link
-        >, and at Google on the <Link
-          href="https://research.google/research-areas/machine-perception/"
-          >Machine Perception team</Link
-        >. I’ve <Link href="https://datajourn.com/">taught</Link> data journalism
-        and <Link href="/assets/docs/freedman_resume_jan_2021.pdf">studied</Link
-        > computational journalism, computer science, and music.
-      </p>
-
-      <p class="show">
-        To get in touch, feel free to reach out at <Link
-          href="mailto:freedmand@gmail.com">freedmand@gmail.com</Link
-        >.
-      </p>
-    </div>
-  </div>
-</div>
-
-<h2 id="projects">Projects</h2>
-<p>
-  I pursue many projects on and off work. Here are some highlights. For
-  reporting work, see <a href="#media">Media</a> below.
-</p>
-
-<Projects />
-
-<h2 id="media">Media</h2>
-
-<Media />

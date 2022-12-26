@@ -1,11 +1,20 @@
 <script>
-  import Link from './Link.svelte';
+  import Link from "./Link.svelte";
 
   export let hideMobile = false;
   export let icon;
   export let text;
   export let link;
+  export let rel = null;
 </script>
+
+<Link noUnderline={true} href={link} aria={text} {rel}>
+  <div class="social" class:hide={hideMobile}>
+    <span class="icon">{@html icon}</span>&nbsp;<span class="middle"
+      >{text}</span
+    >
+  </div>
+</Link>
 
 <style>
   :global(.icon svg) {
@@ -33,9 +42,3 @@
     }
   }
 </style>
-
-<Link noUnderline={true} href={link} aria={text}>
-  <div class="social" class:hide={hideMobile}>
-    <span class="icon">{@html icon}</span>&nbsp;<span class="middle">{text}</span>
-  </div>
-</Link>

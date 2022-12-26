@@ -1,11 +1,63 @@
 <script>
-  import Link from './Link.svelte';
+  import Link from "./Link.svelte";
+  import { getContext } from "svelte";
 
   export let name;
   export let images = [];
 
-  $: dirPath = name.trim().toLowerCase().replace(/[^a-zA-Z0-9]+/g, '_');
+  const dimensions = getContext("dimensions");
+
+  $: dirPath = name
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-zA-Z0-9]+/g, "_");
 </script>
+
+<div class="project">
+  <h3 id={dirPath}>{name}</h3>
+  <slot />
+  {#if images.length > 0}
+    <div class="images">
+      <div class="scroll">
+        {#each images as image}
+          {#if image.length == 2}
+            <Link href={image[1]} noUnderline={true}>
+              <img
+                height="130"
+                width={dimensions[dirPath][
+                  Array.isArray(image) ? image[0] : image
+                ].width / 2}
+                src={`/assets/images/${dirPath}/${
+                  Array.isArray(image) ? image[0] : image
+                }.jpg`}
+                alt={Array.isArray(image[0])
+                  ? image[0][1]
+                  : `Showcase image for ${name}`}
+                loading="lazy"
+              />
+            </Link>
+          {:else}
+            <img
+              height="130"
+              width={dimensions[dirPath][
+                Array.isArray(image) ? image[0] : image
+              ].width / 2}
+              src={`/assets/images/${dirPath}/${
+                Array.isArray(image) ? image[0] : image
+              }.jpg`}
+              alt={Array.isArray(image[0])
+                ? image[0][1]
+                : `Showcase image for ${name}`}
+              loading="lazy"
+            />
+          {/if}
+        {/each}
+        <div class="padder" />
+      </div>
+      <div class="fade" />
+    </div>
+  {/if}
+</div>
 
 <style>
   :global(.images) {
@@ -29,7 +81,7 @@
     top: 0;
     bottom: 12px;
     background: transparent;
-    background: linear-gradient(to left, #FFF9EF, #fff9ef00);
+    background: linear-gradient(to left, #fff9ef, #fff9ef00);
   }
 
   :global(.images img) {
@@ -46,25 +98,3 @@
     margin: 3em 0; /* 40px 0; */
   }
 </style>
-
-<div class="project">
-  <h3 id={dirPath}>{name}</h3>
-  <slot></slot>
-  {#if images.length > 0}
-    <div class="images">
-      <div class="scroll">
-        {#each images as image}
-          {#if image.length == 3}
-            <Link href={image[2]} noUnderline={true}>
-              <img height="130" width={image[1] / 2} src={`/assets/images/${dirPath}/${Array.isArray(image[0]) ? image[0][0] : image[0]}.jpg`} alt={Array.isArray(image[0]) ? image[0][1] : `Showcase image for ${name}`} loading="lazy">
-            </Link>
-          {:else}
-            <img height="130" width={image[1] / 2} src={`/assets/images/${dirPath}/${Array.isArray(image[0]) ? image[0][0] : image[0]}.jpg`} alt={Array.isArray(image[0]) ? image[0][1] : `Showcase image for ${name}`} loading="lazy">
-          {/if}
-        {/each}
-        <div class="padder"></div>
-      </div>
-      <div class="fade"></div>
-    </div>
-  {/if}
-</div>
