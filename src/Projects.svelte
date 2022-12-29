@@ -4,12 +4,11 @@
 </script>
 
 <Project name="Poly" images={["ast", "code"]}>
-  <p>Blog: <Link href="https://poly.dev">poly.dev</Link></p>
+  <p>Website: <Link href="https://poly.dev">poly.dev</Link></p>
   <p>
     Poly is a new programming language for the web I’m currently working on as a
     personal project. The language is in early stages and is designed to compile
-    to full web applications in HTML, CSS, and JavaScript. I’m implementing the
-    language using <Link href="https://reasonml.github.io/">ReasonML</Link>.
+    to full web applications in HTML, CSS, and JavaScript.
   </p>
 </Project>
 
@@ -35,13 +34,13 @@
   </p>
   <p>
     Crosswalker is a general purpose tool for joining columns of text that don’t
-    perfectly match. It features a custom, performant fuzzy matching algorithm
-    to populate initial predictions and a spreadsheet-like interface for
-    refining. Crosswalker was built at the Washington Post and has many
-    applications, but was designed for the purpose of matching precinct names
-    released on election day to past elections as quickly as possible to power
-    the Post’s election night model. <Link
-      href="https://github.com/washingtonpost/crosswalker">Source code</Link
+    perfectly match. It features a custom matching algorithm to populate initial
+    predictions and a spreadsheet-like interface for refining. Crosswalker was
+    built at the Washington Post and has many applications, but was designed for
+    the purpose of matching precinct names released on election day to past
+    elections as quickly as possible to power the Post’s election night model.
+    It is <Link href="https://github.com/washingtonpost/crosswalker"
+      >open source</Link
     >.
   </p>
 </Project>
@@ -54,19 +53,20 @@
   </p>
   <p>
     FastFEC is a command-line tool and library for parsing U.S. campaign finance
-    data quickly. It was written in C with a focus on being as performant and
-    memory-efficient as possible, but there is also an <Link
-      href="https://www.washingtonpost.com/fastfec/demo/">online demo</Link
-    > that uses WebAssembly to run in the browser. FastFEC powers the parsing in
-    the Washington Post’s campaign finance pipeline and has helped with <Link
+    data quickly. It is written in C with a focus on being as performant and
+    memory-efficient as possible. FastFEC powers the parsing in the Washington
+    Post’s campaign finance pipeline and has helped with <Link
       href="https://www.washingtonpost.com/business/2022/05/23/stefanik-company-political-donations/"
       >some</Link
     >
     <Link
       href="https://www.washingtonpost.com/nation/2022/05/10/thom-tillis-madison-cawthorn-primary/"
       >stories</Link
+    >. The tool is <Link href="https://github.com/washingtonpost/FastFEC"
+      >open source</Link
+    > and there is an <Link href="https://www.washingtonpost.com/fastfec/demo/"
+      >online demo</Link
     >.
-    <Link href="https://github.com/washingtonpost/FastFEC">Source code</Link>.
   </p>
 </Project>
 

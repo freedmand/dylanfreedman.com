@@ -15,7 +15,7 @@
     Meet has yet to be matched. Beyond his running performance, the video
     explores his relationship with his father who coached him and unearths
     never-before-uploaded footage of the actual race. The video features
-    original music I composed in high school as an 800m athlete.
+    original music I composed in high school when I was an 800m athlete.
   </p>
 </Project>
 

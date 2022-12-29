@@ -73,9 +73,10 @@
       </p>
 
       <p>
-        I work at The Washington Post as a lead engineer on Elections Platforms
-        within the newsroom engineering team, which builds tools, graphics, and
-        data pipelines to support the newsroom.
+        I work at The Washington Post as a lead engineer on the Elections
+        Platforms team. This team is part of the greater newsroom engineering
+        team, which builds tools, graphics, and data pipelines to support the
+        newsroom.
       </p>
 
       <p>

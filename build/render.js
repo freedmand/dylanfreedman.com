@@ -244,19 +244,14 @@ const Project = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 const Projects = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 	return `${validate_component(Project, "Project").$$render($$result, { name: "Poly", images: ["ast", "code"] }, {}, {
 		default: () => {
-			return `<p>Blog: ${validate_component(Link, "Link").$$render($$result, { href: "https://poly.dev" }, {}, {
+			return `<p>Website: ${validate_component(Link, "Link").$$render($$result, { href: "https://poly.dev" }, {}, {
 				default: () => {
 					return `poly.dev`;
 				}
 			})}</p>
   <p>Poly is a new programming language for the web I’m currently working on as a
     personal project. The language is in early stages and is designed to compile
-    to full web applications in HTML, CSS, and JavaScript. I’m implementing the
-    language using ${validate_component(Link, "Link").$$render($$result, { href: "https://reasonml.github.io/" }, {}, {
-				default: () => {
-					return `ReasonML`;
-				}
-			})}.
+    to full web applications in HTML, CSS, and JavaScript.
   </p>`;
 		}
 	})}
@@ -305,12 +300,12 @@ ${validate_component(Project, "Project").$$render(
 					}
 				)}</p>
   <p>Crosswalker is a general purpose tool for joining columns of text that don’t
-    perfectly match. It features a custom, performant fuzzy matching algorithm
-    to populate initial predictions and a spreadsheet-like interface for
-    refining. Crosswalker was built at the Washington Post and has many
-    applications, but was designed for the purpose of matching precinct names
-    released on election day to past elections as quickly as possible to power
-    the Post’s election night model. ${validate_component(Link, "Link").$$render(
+    perfectly match. It features a custom matching algorithm to populate initial
+    predictions and a spreadsheet-like interface for refining. Crosswalker was
+    built at the Washington Post and has many applications, but was designed for
+    the purpose of matching precinct names released on election day to past
+    elections as quickly as possible to power the Post’s election night model.
+    It is ${validate_component(Link, "Link").$$render(
 					$$result,
 					{
 						href: "https://github.com/washingtonpost/crosswalker"
@@ -318,7 +313,7 @@ ${validate_component(Project, "Project").$$render(
 					{},
 					{
 						default: () => {
-							return `Source code`;
+							return `open source`;
 						}
 					}
 				)}.
@@ -342,20 +337,9 @@ ${validate_component(Project, "Project").$$render($$result, { name: "FastFEC", i
 				}
 			)}</p>
   <p>FastFEC is a command-line tool and library for parsing U.S. campaign finance
-    data quickly. It was written in C with a focus on being as performant and
-    memory-efficient as possible, but there is also an ${validate_component(Link, "Link").$$render(
-				$$result,
-				{
-					href: "https://www.washingtonpost.com/fastfec/demo/"
-				},
-				{},
-				{
-					default: () => {
-						return `online demo`;
-					}
-				}
-			)} that uses WebAssembly to run in the browser. FastFEC powers the parsing in
-    the Washington Post’s campaign finance pipeline and has helped with ${validate_component(Link, "Link").$$render(
+    data quickly. It is written in C with a focus on being as performant and
+    memory-efficient as possible. FastFEC powers the parsing in the Washington
+    Post’s campaign finance pipeline and has helped with ${validate_component(Link, "Link").$$render(
 				$$result,
 				{
 					href: "https://www.washingtonpost.com/business/2022/05/23/stefanik-company-political-donations/"
@@ -378,8 +362,7 @@ ${validate_component(Project, "Project").$$render($$result, { name: "FastFEC", i
 						return `stories`;
 					}
 				}
-			)}.
-    ${validate_component(Link, "Link").$$render(
+			)}. The tool is ${validate_component(Link, "Link").$$render(
 				$$result,
 				{
 					href: "https://github.com/washingtonpost/FastFEC"
@@ -387,7 +370,18 @@ ${validate_component(Project, "Project").$$render($$result, { name: "FastFEC", i
 				{},
 				{
 					default: () => {
-						return `Source code`;
+						return `open source`;
+					}
+				}
+			)} and there is an ${validate_component(Link, "Link").$$render(
+				$$result,
+				{
+					href: "https://www.washingtonpost.com/fastfec/demo/"
+				},
+				{},
+				{
+					default: () => {
+						return `online demo`;
 					}
 				}
 			)}.
@@ -865,7 +859,7 @@ const Media = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     Meet has yet to be matched. Beyond his running performance, the video
     explores his relationship with his father who coached him and unearths
     never-before-uploaded footage of the actual race. The video features
-    original music I composed in high school as an 800m athlete.
+    original music I composed in high school when I was an 800m athlete.
   </p>`;
 			}
 		}
@@ -995,7 +989,7 @@ var icons = {
 
 const css$5 = {
 	code: "html, body{font-family:\"Atkinson Hyperlegible\", sans-serif;font-size:19px;line-height:1.6em;max-width:740px;padding:0 1.3em;margin:2.6em auto;background:#fff9ef;scroll-behavior:smooth}h1{font-size:2.2em;margin:1.2em 0 0.7em 0;font-weight:normal}h2{font-size:1.7em;margin:1.6em 0 0.5em 0;font-weight:normal}h3{font-size:1.3em;font-weight:normal;margin:0.6em 0}.intro{display:table}.intro > div{display:table-row}.intro > div > div{display:table-cell;vertical-align:top}.profile{padding-top:1.3em;padding-right:1.2em}.hide{display:none}@media only screen and (max-width: 600px){html, body{font-size:15px}h2{margin-top:2em}.intro{display:block}.intro > div{display:block}.intro > div > div{display:block}.profile{padding:0.6em 0;margin:0 auto}.socials{display:inline-block;vertical-align:middle;padding-left:1em}.hide{display:block}.show{display:none}}",
-	map: "{\"version\":3,\"file\":\"Index.svelte\",\"sources\":[\"Index.svelte\"],\"sourcesContent\":[\"<script>\\n  import Font from \\\"./Font.svelte\\\";\\n  import ProfileImage from \\\"./ProfileImage.svelte\\\";\\n  import Link from \\\"./Link.svelte\\\";\\n  import Social from \\\"./Social.svelte\\\";\\n  import Projects from \\\"./Projects.svelte\\\";\\n  import Media from \\\"./Media.svelte\\\";\\n\\n  import icons from \\\"./icons.js\\\";\\n</script>\\n\\n<svelte:head>\\n  <meta charset=\\\"UTF-8\\\" />\\n  <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"IE=edge\\\" />\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\" />\\n  <title>Dylan Freedman</title>\\n  <link rel=\\\"icon\\\" type=\\\"image/png\\\" href=\\\"/favicon.png\\\" />\\n  <meta\\n    name=\\\"description\\\"\\n    content=\\\"I’m Dylan, a full-stack software engineer and journalist. I strive to code new tools to help journalists and the public.\\\"\\n  />\\n</svelte:head>\\n\\n<!-- Import font -->\\n<Font />\\n\\n<h1>Dylan Freedman</h1>\\n\\n<div class=\\\"intro\\\">\\n  <div>\\n    <div class=\\\"profile\\\">\\n      <ProfileImage />\\n      <div class=\\\"socials\\\">\\n        <Social\\n          hideMobile={true}\\n          icon={icons.email}\\n          text=\\\"Email\\\"\\n          link=\\\"mailto:freedmand@gmail.com\\\"\\n        />\\n        <Social\\n          rel=\\\"me\\\"\\n          icon={icons.mastodon}\\n          text=\\\"Mastodon\\\"\\n          link=\\\"https://journa.host/@dylan\\\"\\n        />\\n        <Social\\n          icon={icons.twitter}\\n          text=\\\"Twitter\\\"\\n          link=\\\"https://twitter.com/dylfreed\\\"\\n        />\\n        <Social\\n          icon={icons.github}\\n          text=\\\"GitHub\\\"\\n          link=\\\"https://github.com/freedmand\\\"\\n        />\\n        <Social\\n          icon={icons.observable}\\n          text=\\\"Observable\\\"\\n          link=\\\"https://observablehq.com/@freedmand\\\"\\n        />\\n        <!-- TODO: make more modern resume -->\\n        <!-- <Social\\n          icon={icons.resume}\\n          text=\\\"Résumé\\\"\\n          link=\\\"/assets/docs/freedman_resume_jan_2021.pdf\\\"\\n        /> -->\\n      </div>\\n    </div>\\n    <div class=\\\"blurb\\\">\\n      <p>\\n        Hi! I’m Dylan, a full-stack software engineer and journalist. I strive\\n        to code new tools to help journalists and the public.\\n      </p>\\n\\n      <p>\\n        I work at The Washington Post as a lead engineer on Elections Platforms\\n        within the newsroom engineering team, which builds tools, graphics, and\\n        data pipelines to support the newsroom.\\n      </p>\\n\\n      <p>\\n        Previously, I worked at <Link href=\\\"https://www.muckrock.com/\\\"\\n          >MuckRock</Link\\n        >, where I led development of journalism technology platform <Link\\n          href=\\\"https://documentcloud.org/\\\">DocumentCloud</Link\\n        >, and at Google on the <Link\\n          href=\\\"https://research.google/research-areas/machine-perception/\\\"\\n          >Machine Perception team</Link\\n        >. I’ve <Link href=\\\"https://datajourn.com/\\\">taught</Link> data journalism\\n        and <Link href=\\\"/assets/docs/freedman_resume_jan_2021.pdf\\\">studied</Link\\n        > computational journalism, computer science, and music.\\n      </p>\\n\\n      <p class=\\\"show\\\">\\n        To get in touch, feel free to reach out at <Link\\n          href=\\\"mailto:freedmand@gmail.com\\\">freedmand@gmail.com</Link\\n        >.\\n      </p>\\n    </div>\\n  </div>\\n</div>\\n\\n<h2 id=\\\"projects\\\">Projects</h2>\\n<p>\\n  I pursue many projects on and off work. Here are some highlights. For\\n  reporting work, see <a href=\\\"#media\\\">Media</a> below.\\n</p>\\n\\n<Projects />\\n\\n<h2 id=\\\"media\\\">Media</h2>\\n\\n<Media />\\n\\n<style>\\n  :global(html, body) {\\n    font-family: \\\"Atkinson Hyperlegible\\\", sans-serif;\\n    font-size: 19px;\\n    line-height: 1.6em; /* 30px; */\\n    max-width: 740px;\\n    padding: 0 1.3em; /* 0 24px; */\\n    margin: 2.6em auto; /* 50px auto; */\\n    background: #fff9ef;\\n    scroll-behavior: smooth;\\n  }\\n\\n  :global(h1) {\\n    font-size: 2.2em; /* 41px; */\\n    margin: 1.2em 0 0.7em 0; /* 51px 0 30px 0; */\\n    font-weight: normal;\\n  }\\n\\n  :global(h2) {\\n    font-size: 1.7em; /* 32px; */\\n    margin: 1.6em 0 0.5em 0; /* 51px 0 15px 0; */\\n    font-weight: normal;\\n  }\\n\\n  :global(h3) {\\n    font-size: 1.3em; /* 25px; */\\n    font-weight: normal;\\n    margin: 0.6em 0; /* 15px 0 15px 0; */\\n  }\\n\\n  :global(.intro) {\\n    display: table;\\n  }\\n\\n  :global(.intro > div) {\\n    display: table-row;\\n  }\\n\\n  :global(.intro > div > div) {\\n    display: table-cell;\\n    vertical-align: top;\\n  }\\n\\n  :global(.profile) {\\n    padding-top: 1.3em; /* 12px; */\\n    padding-right: 1.2em; /* 15px; */\\n  }\\n\\n  :global(.hide) {\\n    display: none;\\n  }\\n\\n  @media only screen and (max-width: 600px) {\\n    :global(html, body) {\\n      font-size: 15px;\\n    }\\n\\n    :global(h2) {\\n      margin-top: 2em;\\n    }\\n\\n    :global(.intro) {\\n      display: block;\\n    }\\n\\n    :global(.intro > div) {\\n      display: block;\\n    }\\n\\n    :global(.intro > div > div) {\\n      display: block;\\n    }\\n\\n    :global(.profile) {\\n      padding: 0.6em 0;\\n      margin: 0 auto;\\n    }\\n\\n    :global(.socials) {\\n      display: inline-block;\\n      vertical-align: middle;\\n      padding-left: 1em;\\n    }\\n\\n    :global(.hide) {\\n      display: block;\\n    }\\n\\n    :global(.show) {\\n      display: none;\\n    }\\n  }\\n</style>\\n\"],\"names\":[],\"mappings\":\"AAmHU,UAAU,AAAE,CAAC,AACnB,WAAW,CAAE,uBAAuB,CAAC,CAAC,UAAU,CAChD,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,KAAK,CAClB,SAAS,CAAE,KAAK,CAChB,OAAO,CAAE,CAAC,CAAC,KAAK,CAChB,MAAM,CAAE,KAAK,CAAC,IAAI,CAClB,UAAU,CAAE,OAAO,CACnB,eAAe,CAAE,MAAM,AACzB,CAAC,AAEO,EAAE,AAAE,CAAC,AACX,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,KAAK,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,CACvB,WAAW,CAAE,MAAM,AACrB,CAAC,AAEO,EAAE,AAAE,CAAC,AACX,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,KAAK,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,CACvB,WAAW,CAAE,MAAM,AACrB,CAAC,AAEO,EAAE,AAAE,CAAC,AACX,SAAS,CAAE,KAAK,CAChB,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,KAAK,CAAC,CAAC,AACjB,CAAC,AAEO,MAAM,AAAE,CAAC,AACf,OAAO,CAAE,KAAK,AAChB,CAAC,AAEO,YAAY,AAAE,CAAC,AACrB,OAAO,CAAE,SAAS,AACpB,CAAC,AAEO,kBAAkB,AAAE,CAAC,AAC3B,OAAO,CAAE,UAAU,CACnB,cAAc,CAAE,GAAG,AACrB,CAAC,AAEO,QAAQ,AAAE,CAAC,AACjB,WAAW,CAAE,KAAK,CAClB,aAAa,CAAE,KAAK,AACtB,CAAC,AAEO,KAAK,AAAE,CAAC,AACd,OAAO,CAAE,IAAI,AACf,CAAC,AAED,OAAO,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACjC,UAAU,AAAE,CAAC,AACnB,SAAS,CAAE,IAAI,AACjB,CAAC,AAEO,EAAE,AAAE,CAAC,AACX,UAAU,CAAE,GAAG,AACjB,CAAC,AAEO,MAAM,AAAE,CAAC,AACf,OAAO,CAAE,KAAK,AAChB,CAAC,AAEO,YAAY,AAAE,CAAC,AACrB,OAAO,CAAE,KAAK,AAChB,CAAC,AAEO,kBAAkB,AAAE,CAAC,AAC3B,OAAO,CAAE,KAAK,AAChB,CAAC,AAEO,QAAQ,AAAE,CAAC,AACjB,OAAO,CAAE,KAAK,CAAC,CAAC,CAChB,MAAM,CAAE,CAAC,CAAC,IAAI,AAChB,CAAC,AAEO,QAAQ,AAAE,CAAC,AACjB,OAAO,CAAE,YAAY,CACrB,cAAc,CAAE,MAAM,CACtB,YAAY,CAAE,GAAG,AACnB,CAAC,AAEO,KAAK,AAAE,CAAC,AACd,OAAO,CAAE,KAAK,AAChB,CAAC,AAEO,KAAK,AAAE,CAAC,AACd,OAAO,CAAE,IAAI,AACf,CAAC,AACH,CAAC\"}"
+	map: "{\"version\":3,\"file\":\"Index.svelte\",\"sources\":[\"Index.svelte\"],\"sourcesContent\":[\"<script>\\n  import Font from \\\"./Font.svelte\\\";\\n  import ProfileImage from \\\"./ProfileImage.svelte\\\";\\n  import Link from \\\"./Link.svelte\\\";\\n  import Social from \\\"./Social.svelte\\\";\\n  import Projects from \\\"./Projects.svelte\\\";\\n  import Media from \\\"./Media.svelte\\\";\\n\\n  import icons from \\\"./icons.js\\\";\\n</script>\\n\\n<svelte:head>\\n  <meta charset=\\\"UTF-8\\\" />\\n  <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"IE=edge\\\" />\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\" />\\n  <title>Dylan Freedman</title>\\n  <link rel=\\\"icon\\\" type=\\\"image/png\\\" href=\\\"/favicon.png\\\" />\\n  <meta\\n    name=\\\"description\\\"\\n    content=\\\"I’m Dylan, a full-stack software engineer and journalist. I strive to code new tools to help journalists and the public.\\\"\\n  />\\n</svelte:head>\\n\\n<!-- Import font -->\\n<Font />\\n\\n<h1>Dylan Freedman</h1>\\n\\n<div class=\\\"intro\\\">\\n  <div>\\n    <div class=\\\"profile\\\">\\n      <ProfileImage />\\n      <div class=\\\"socials\\\">\\n        <Social\\n          hideMobile={true}\\n          icon={icons.email}\\n          text=\\\"Email\\\"\\n          link=\\\"mailto:freedmand@gmail.com\\\"\\n        />\\n        <Social\\n          rel=\\\"me\\\"\\n          icon={icons.mastodon}\\n          text=\\\"Mastodon\\\"\\n          link=\\\"https://journa.host/@dylan\\\"\\n        />\\n        <Social\\n          icon={icons.twitter}\\n          text=\\\"Twitter\\\"\\n          link=\\\"https://twitter.com/dylfreed\\\"\\n        />\\n        <Social\\n          icon={icons.github}\\n          text=\\\"GitHub\\\"\\n          link=\\\"https://github.com/freedmand\\\"\\n        />\\n        <Social\\n          icon={icons.observable}\\n          text=\\\"Observable\\\"\\n          link=\\\"https://observablehq.com/@freedmand\\\"\\n        />\\n        <!-- TODO: make more modern resume -->\\n        <!-- <Social\\n          icon={icons.resume}\\n          text=\\\"Résumé\\\"\\n          link=\\\"/assets/docs/freedman_resume_jan_2021.pdf\\\"\\n        /> -->\\n      </div>\\n    </div>\\n    <div class=\\\"blurb\\\">\\n      <p>\\n        Hi! I’m Dylan, a full-stack software engineer and journalist. I strive\\n        to code new tools to help journalists and the public.\\n      </p>\\n\\n      <p>\\n        I work at The Washington Post as a lead engineer on the Elections\\n        Platforms team. This team is part of the greater newsroom engineering\\n        team, which builds tools, graphics, and data pipelines to support the\\n        newsroom.\\n      </p>\\n\\n      <p>\\n        Previously, I worked at <Link href=\\\"https://www.muckrock.com/\\\"\\n          >MuckRock</Link\\n        >, where I led development of journalism technology platform <Link\\n          href=\\\"https://documentcloud.org/\\\">DocumentCloud</Link\\n        >, and at Google on the <Link\\n          href=\\\"https://research.google/research-areas/machine-perception/\\\"\\n          >Machine Perception team</Link\\n        >. I’ve <Link href=\\\"https://datajourn.com/\\\">taught</Link> data journalism\\n        and <Link href=\\\"/assets/docs/freedman_resume_jan_2021.pdf\\\">studied</Link\\n        > computational journalism, computer science, and music.\\n      </p>\\n\\n      <p class=\\\"show\\\">\\n        To get in touch, feel free to reach out at <Link\\n          href=\\\"mailto:freedmand@gmail.com\\\">freedmand@gmail.com</Link\\n        >.\\n      </p>\\n    </div>\\n  </div>\\n</div>\\n\\n<h2 id=\\\"projects\\\">Projects</h2>\\n<p>\\n  I pursue many projects on and off work. Here are some highlights. For\\n  reporting work, see <a href=\\\"#media\\\">Media</a> below.\\n</p>\\n\\n<Projects />\\n\\n<h2 id=\\\"media\\\">Media</h2>\\n\\n<Media />\\n\\n<style>\\n  :global(html, body) {\\n    font-family: \\\"Atkinson Hyperlegible\\\", sans-serif;\\n    font-size: 19px;\\n    line-height: 1.6em; /* 30px; */\\n    max-width: 740px;\\n    padding: 0 1.3em; /* 0 24px; */\\n    margin: 2.6em auto; /* 50px auto; */\\n    background: #fff9ef;\\n    scroll-behavior: smooth;\\n  }\\n\\n  :global(h1) {\\n    font-size: 2.2em; /* 41px; */\\n    margin: 1.2em 0 0.7em 0; /* 51px 0 30px 0; */\\n    font-weight: normal;\\n  }\\n\\n  :global(h2) {\\n    font-size: 1.7em; /* 32px; */\\n    margin: 1.6em 0 0.5em 0; /* 51px 0 15px 0; */\\n    font-weight: normal;\\n  }\\n\\n  :global(h3) {\\n    font-size: 1.3em; /* 25px; */\\n    font-weight: normal;\\n    margin: 0.6em 0; /* 15px 0 15px 0; */\\n  }\\n\\n  :global(.intro) {\\n    display: table;\\n  }\\n\\n  :global(.intro > div) {\\n    display: table-row;\\n  }\\n\\n  :global(.intro > div > div) {\\n    display: table-cell;\\n    vertical-align: top;\\n  }\\n\\n  :global(.profile) {\\n    padding-top: 1.3em; /* 12px; */\\n    padding-right: 1.2em; /* 15px; */\\n  }\\n\\n  :global(.hide) {\\n    display: none;\\n  }\\n\\n  @media only screen and (max-width: 600px) {\\n    :global(html, body) {\\n      font-size: 15px;\\n    }\\n\\n    :global(h2) {\\n      margin-top: 2em;\\n    }\\n\\n    :global(.intro) {\\n      display: block;\\n    }\\n\\n    :global(.intro > div) {\\n      display: block;\\n    }\\n\\n    :global(.intro > div > div) {\\n      display: block;\\n    }\\n\\n    :global(.profile) {\\n      padding: 0.6em 0;\\n      margin: 0 auto;\\n    }\\n\\n    :global(.socials) {\\n      display: inline-block;\\n      vertical-align: middle;\\n      padding-left: 1em;\\n    }\\n\\n    :global(.hide) {\\n      display: block;\\n    }\\n\\n    :global(.show) {\\n      display: none;\\n    }\\n  }\\n</style>\\n\"],\"names\":[],\"mappings\":\"AAoHU,UAAU,AAAE,CAAC,AACnB,WAAW,CAAE,uBAAuB,CAAC,CAAC,UAAU,CAChD,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,KAAK,CAClB,SAAS,CAAE,KAAK,CAChB,OAAO,CAAE,CAAC,CAAC,KAAK,CAChB,MAAM,CAAE,KAAK,CAAC,IAAI,CAClB,UAAU,CAAE,OAAO,CACnB,eAAe,CAAE,MAAM,AACzB,CAAC,AAEO,EAAE,AAAE,CAAC,AACX,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,KAAK,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,CACvB,WAAW,CAAE,MAAM,AACrB,CAAC,AAEO,EAAE,AAAE,CAAC,AACX,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,KAAK,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,CACvB,WAAW,CAAE,MAAM,AACrB,CAAC,AAEO,EAAE,AAAE,CAAC,AACX,SAAS,CAAE,KAAK,CAChB,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,KAAK,CAAC,CAAC,AACjB,CAAC,AAEO,MAAM,AAAE,CAAC,AACf,OAAO,CAAE,KAAK,AAChB,CAAC,AAEO,YAAY,AAAE,CAAC,AACrB,OAAO,CAAE,SAAS,AACpB,CAAC,AAEO,kBAAkB,AAAE,CAAC,AAC3B,OAAO,CAAE,UAAU,CACnB,cAAc,CAAE,GAAG,AACrB,CAAC,AAEO,QAAQ,AAAE,CAAC,AACjB,WAAW,CAAE,KAAK,CAClB,aAAa,CAAE,KAAK,AACtB,CAAC,AAEO,KAAK,AAAE,CAAC,AACd,OAAO,CAAE,IAAI,AACf,CAAC,AAED,OAAO,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACjC,UAAU,AAAE,CAAC,AACnB,SAAS,CAAE,IAAI,AACjB,CAAC,AAEO,EAAE,AAAE,CAAC,AACX,UAAU,CAAE,GAAG,AACjB,CAAC,AAEO,MAAM,AAAE,CAAC,AACf,OAAO,CAAE,KAAK,AAChB,CAAC,AAEO,YAAY,AAAE,CAAC,AACrB,OAAO,CAAE,KAAK,AAChB,CAAC,AAEO,kBAAkB,AAAE,CAAC,AAC3B,OAAO,CAAE,KAAK,AAChB,CAAC,AAEO,QAAQ,AAAE,CAAC,AACjB,OAAO,CAAE,KAAK,CAAC,CAAC,CAChB,MAAM,CAAE,CAAC,CAAC,IAAI,AAChB,CAAC,AAEO,QAAQ,AAAE,CAAC,AACjB,OAAO,CAAE,YAAY,CACrB,cAAc,CAAE,MAAM,CACtB,YAAY,CAAE,GAAG,AACnB,CAAC,AAEO,KAAK,AAAE,CAAC,AACd,OAAO,CAAE,KAAK,AAChB,CAAC,AAEO,KAAK,AAAE,CAAC,AACd,OAAO,CAAE,IAAI,AACf,CAAC,AACH,CAAC\"}"
 };
 
 const Index = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -1067,9 +1061,10 @@ ${validate_component(Font, "Font").$$render($$result, {}, {}, {})}
         to code new tools to help journalists and the public.
       </p>
 
-      <p>I work at The Washington Post as a lead engineer on Elections Platforms
-        within the newsroom engineering team, which builds tools, graphics, and
-        data pipelines to support the newsroom.
+      <p>I work at The Washington Post as a lead engineer on the Elections
+        Platforms team. This team is part of the greater newsroom engineering
+        team, which builds tools, graphics, and data pipelines to support the
+        newsroom.
       </p>
 
       <p>Previously, I worked at ${validate_component(Link, "Link").$$render($$result, { href: "https://www.muckrock.com/" }, {}, {
