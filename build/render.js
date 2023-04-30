@@ -256,6 +256,30 @@ const Projects = create_ssr_component(($$result, $$props, $$bindings, slots) => 
 		}
 	})}
 
+${validate_component(Project, "Project").$$render($$result, { name: "Semantra", images: ["website"] }, {}, {
+		default: () => {
+			return `<p>Website: ${validate_component(Link, "Link").$$render(
+				$$result,
+				{
+					href: "https://github.com/freedmand/semantra"
+				},
+				{},
+				{
+					default: () => {
+						return `github.com/freedmand/semantra`;
+					}
+				}
+			)}</p>
+  <p>Semantra is a multipurpose tool for semantically searching documents. Query
+    by meaning rather than just by matching text. The tool, made to run on the
+    command line, analyzes specified text and PDF files on your computer and
+    launches a local web search application for interactively querying them. The
+    purpose of Semantra is to make running a specialized semantic search engine
+    easy, friendly, configurable, and private/secure.
+  </p>`;
+		}
+	})}
+
 ${validate_component(Project, "Project").$$render($$result, { name: "Textra", images: ["terminal"] }, {}, {
 		default: () => {
 			return `<p>Website: ${validate_component(Link, "Link").$$render(

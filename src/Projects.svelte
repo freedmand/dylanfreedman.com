@@ -12,6 +12,22 @@
   </p>
 </Project>
 
+<Project name="Semantra" images={["website"]}>
+  <p>
+    Website: <Link href="https://github.com/freedmand/semantra"
+      >github.com/freedmand/semantra</Link
+    >
+  </p>
+  <p>
+    Semantra is a multipurpose tool for semantically searching documents. Query
+    by meaning rather than just by matching text. The tool, made to run on the
+    command line, analyzes specified text and PDF files on your computer and
+    launches a local web search application for interactively querying them. The
+    purpose of Semantra is to make running a specialized semantic search engine
+    easy, friendly, configurable, and private/secure.
+  </p>
+</Project>
+
 <Project name="Textra" images={["terminal"]}>
   <p>
     Website: <Link href="https://github.com/freedmand/textra"
