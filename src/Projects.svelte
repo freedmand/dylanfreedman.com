@@ -3,15 +3,6 @@
   import Project from "./Project.svelte";
 </script>
 
-<Project name="Poly" images={["ast", "code"]}>
-  <p>Website: <Link href="https://poly.dev">poly.dev</Link></p>
-  <p>
-    Poly is a new programming language for the web I’m currently working on as a
-    personal project. The language is in early stages and is designed to compile
-    to full web applications in HTML, CSS, and JavaScript.
-  </p>
-</Project>
-
 <Project name="Semantra" images={["website"]}>
   <p>
     Website: <Link href="https://github.com/freedmand/semantra"
@@ -83,6 +74,15 @@
     > and there is an <Link href="https://www.washingtonpost.com/fastfec/demo/"
       >online demo</Link
     >.
+  </p>
+</Project>
+
+<Project name="Poly" images={["ast", "code"]}>
+  <p>Website: <Link href="https://poly.dev">poly.dev</Link></p>
+  <p>
+    Poly is a new programming language for the web I’m currently working on as a
+    personal project. The language is in early stages and is designed to compile
+    to full web applications in HTML, CSS, and JavaScript.
   </p>
 </Project>
 

@@ -73,9 +73,8 @@
       </p>
 
       <p>
-        I work at The Washington Post as a lead engineer on the Elections
-        Platforms team. This team is part of the greater newsroom engineering
-        team, which builds tools, graphics, and data pipelines to support the
+        I work at The Washington Post as a principal engineer on the Elections
+        team, where I build tools, graphics, and data pipelines to support the
         newsroom.
       </p>
 
@@ -84,7 +83,7 @@
           >MuckRock</Link
         >, where I led development of journalism technology platform <Link
           href="https://documentcloud.org/">DocumentCloud</Link
-        >, and at Google on the <Link
+        >, and at Google as a research engineer on the <Link
           href="https://research.google/research-areas/machine-perception/"
           >Machine Perception team</Link
         >. I’ve <Link href="https://datajourn.com/">taught</Link> data journalism
@@ -116,7 +115,7 @@
 <style>
   :global(html, body) {
     font-family: "Atkinson Hyperlegible", sans-serif;
-    font-size: 19px;
+    font-size: 17px;
     line-height: 1.6em; /* 30px; */
     max-width: 740px;
     padding: 0 1.3em; /* 0 24px; */
