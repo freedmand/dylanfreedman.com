@@ -1,0 +1,38 @@
+{
+  "type": "StyleSheet",
+  "loc": null,
+  "children": [
+    {
+      "type": "Rule",
+      "loc": null,
+      "prelude": {
+        "type": "SelectorList",
+        "loc": null,
+        "children": [
+          {
+            "type": "Selector",
+            "loc": null,
+            "children": [{ "type": "TypeSelector", "loc": null, "name": "div" }]
+          }
+        ]
+      },
+      "block": {
+        "type": "Block",
+        "loc": null,
+        "children": [
+          {
+            "type": "Declaration",
+            "loc": null,
+            "important": false,
+            "property": "color",
+            "value": {
+              "type": "Value",
+              "loc": null,
+              "children": [{ "type": "Identifier", "loc": null, "name": "red" }]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

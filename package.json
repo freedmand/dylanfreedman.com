@@ -1,32 +1,17 @@
 {
-  "name": "dylan_freedman_personal_website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "dylanfreedman.com",
   "scripts": {
-    "build": "rollup -c && node build/render.js",
-    "dev": "concurrently \"npm:dev-compile\" \"npm:dev-server\"",
-    "dev-compile": "rollup -c -w",
-    "dev-server": "live-server public",
-    "compress-images": "node resize_images.mjs"
+    "build": "bun run src/build.ts"
   },
-  "author": "Dylan Freedman",
-  "license": "MIT",
+  "dependencies": {
+    "css-tree": "^2.3.1",
+    "hast-util-to-html": "^9.0.0",
+    "hastscript": "^9.0.0",
+    "typescript": "^5.3.3"
+  },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "11.1.1",
-    "concurrently": "5.3.0",
-    "html-minifier": "4.0.0",
-    "image-size": "0.9.3",
-    "imagemin": "^8.0.1",
-    "imagemin-gm": "^2.0.3",
-    "imagemin-jpegtran": "^7.0.0",
-    "live-server": "1.2.1",
-    "posthtml": "0.15.1",
-    "posthtml-remove-attributes": "1.0.0",
-    "rollup": "2.38.5",
-    "rollup-plugin-css-only": "3.1.0",
-    "rollup-plugin-execute": "1.1.1",
-    "rollup-plugin-svelte": "^7.1.0",
-    "svelte": "^3.55.0"
+    "@types/bun": "^1.0.5",
+    "@types/css-tree": "^2.3.5",
+    "tsx": "^4.7.1"
   }
 }
