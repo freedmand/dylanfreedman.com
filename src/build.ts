@@ -14,7 +14,7 @@ if (fs.existsSync(buildDir)) {
 fs.mkdirSync(buildDir);
 
 // Copy static files into build dir
-fs.cpSync(staticDir, path.join(buildDir, "static"), { recursive: true });
+fs.cpSync(staticDir, buildDir, { recursive: true });
 
 // Write index.html
 const indexPath = path.join(buildDir, "index.html");
