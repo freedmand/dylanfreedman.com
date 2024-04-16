@@ -398,9 +398,9 @@ export function gen(): string {
           h(
             "div",
             null,
-            "@washington post, ",
+            "@nytimes, ",
             h("br"),
-            "prev @documentcloud, @google"
+            "prev @washpost, @documentcloud, @google"
           )
         )
       ),
